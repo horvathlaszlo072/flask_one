@@ -1,3 +1,5 @@
-from app import db
+from app import app, db, BlogPost
 
-db.create_all()
+with app.app_context():
+    db.session.add(BlogPost(title='Blog Post 4', content='Content of Blog post 4. Tqeeqeqdeweflal',))
+    db.session.commit()

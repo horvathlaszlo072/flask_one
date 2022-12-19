@@ -1,8 +1,4 @@
-{% extends 'base.html' %}
-
-{% block head %} 
-<title>Posts</title>
-{% endblock %}
+ 
 
 {% block body %} 
 <h1>All posts</h1>
@@ -10,8 +6,9 @@
     <hr>
     <h2>Create New Blog Post:</h2>
     <form action="/posts" method="post">
-        Title: <input type="text" name ="title" id="title">
-        Post: <input type="text" name ="content" id="content">
+        Title: <input type="text" name ="title" id="title" value="{{post.id}}"><br>
+        Author: <input type="text" name ="author" id="author" value="{{post.author}}"><br>
+        Post: <input type="text" name ="content" id="content" value="{{post.content}}">
         <br>
         <input type="submit" value="Post">
     </form>
@@ -27,6 +24,10 @@
         {% endif %}
         
         <p>{{ post.content }}</p>
+        <a href='/posts/delete/{{post.id}}'>Delete</a>
+        <a href='/posts/edit/{{post.id}}'>Edit</a>
+        <hr>
         
-    {% endfor %}
+    {% endfor %} 
+
 {% endblock %}

@@ -1,12 +1,23 @@
 {% extends 'base.html' %}
 
-{% block head %} 
+{% block head %}
 <title>Home</title>
 {% endblock %}
 
-{% block body %} 
+{% block body %}
+<br>
 <h1>Home page</h1>
+<br>
+<main role="main">
+    <div class="jumbotron">
+        <div class="col-sm-8 mx-auto">
+            <h1>Welcome</h1>
+            <p>Ez itt egy faszájntos bevezető szöveg Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis aliquam voluptatem id magni nemo labore laborum dolores explicabo voluptates a asperiores et provident consectetur, ratione facilis tempora, molestiae possimus fuga. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur harum voluptatibus ut eligendi impedit, doloremque incidunt quae nam eos quia blanditiis iste id saepe sed! Accusantium quo laborum facilis dolore.</p>
+            <p>Go wisit a website <a href="https://cleverprogramer.com">cleverprogramer.com </a>the check out more cool stuff beyond just blogs.</p>
+            <p>
+                <a class="btn btn-primary" href="/posts" role="button">Go To Posts</a>
+            </p>
+        </div>
+    </div>
+</main>
 {% endblock %}
-
-
-
